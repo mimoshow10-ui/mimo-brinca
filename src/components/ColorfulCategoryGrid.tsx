@@ -31,6 +31,13 @@ const CATEGORIAS_MIMO = [
     bgGradient: 'from-emerald-400 to-teal-500',
     shadowColor: 'shadow-emerald-200',
   },
+  {
+    nome: 'Decoração',
+    emoji: '🖼️',
+    slug: 'decoracao',
+    bgGradient: 'from-purple-400 to-indigo-500',
+    shadowColor: 'shadow-indigo-200',
+  },
 ];
 
 export default function ColorfulCategoryGrid() {
@@ -44,7 +51,7 @@ export default function ColorfulCategoryGrid() {
           <span className="text-xs font-bold text-slate-400">Escolha seu mimo favorito</span>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 md:gap-4">
           {CATEGORIAS_MIMO.map((cat, idx) => (
             <Link
               key={idx}

@@ -13,6 +13,7 @@ const EMOJIS: Record<string, string> = {
   'brinquedos': '🧸',
   'quebra-cabecas': '🧩',
   'tiaras-e-bolsas': '👑',
+  'decoracao': '🖼️',
 };
 
 export default async function CategoryNav() {

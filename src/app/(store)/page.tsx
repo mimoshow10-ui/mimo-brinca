@@ -17,17 +17,7 @@ export default async function Home() {
   const { data: configs } = await supabase.from('configuracoes').select('*');
   const bannersConfig = configs?.find(c => c.chave === 'marketing_banners')?.valor;
   let banners: Array<{ url: string; link_url?: string }> = [];
-  if (bannersConfig?.items && Array.isArray(bannersConfig.items)) {
-    banners = bannersConfig.items;
-  } else if (bannersConfig?.urls && Array.isArray(bannersConfig.urls)) {
-    banners = bannersConfig.urls.map((u: string) => ({ url: u, link_url: '' }));
-  } else {
-    banners = [{ url: '/banner-cao-crianca.png', link_url: '' }];
-  }
-
-  if (banners.length === 0 || !banners.some(b => b.url.includes('banner-cao-crianca'))) {
-    banners = [{ url: '/banner-cao-crianca.png', link_url: '' }, ...banners];
-  }
+  banners = [{ url: '/banner-infantil.png', link_url: '' }];
 
   const cuponsConfig = configs?.find(c => c.chave === 'cupons_config')?.valor || { posicao_home: 'topo' };
   const posicaoCupons = cuponsConfig.posicao_home || 'topo';
