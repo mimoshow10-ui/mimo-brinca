@@ -1,25 +1,26 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #FF6B35;
-  --color-secondary: #004E89;
-  --color-accent: #F7B801;
-  --color-background: #FAFAFD;
-  --color-text: #1E293B;
+  --color-primary: #0284C7;
+  --color-secondary: #0F172A;
+  --color-accent: #FACC15;
+  --color-pink: #EC4899;
+  --color-green: #10B981;
+  --color-blue: #0284C7;
+  --color-yellow: #FACC15;
+  --color-background: #F8FAFC;
+  --color-text: #0F172A;
   --color-border: #E2E8F0;
   --color-success: #10B981;
   --color-alert: #EF4444;
-  --color-purple: #8B5CF6;
-  --color-pink: #EC4899;
-  --color-teal: #14B8A6;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --background: #FAFAFD;
-  --foreground: #1E293B;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
 }
 
 body {
@@ -43,21 +44,29 @@ h1, h2, h3, h4, h5, h6 {
   scrollbar-width: none !important;
 }
 
-/* Efeitos Especiais de Cores & Animações Mimo Brinca */
+/* Efeitos Especiais de Cores Mimo Brinca: AZUL, AMARELO, VERDE E ROSA */
 .bg-vibrant-gradient {
-  background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 40%, #F7B801 100%);
+  background: linear-gradient(135deg, #0284C7 0%, #EC4899 45%, #FACC15 100%);
 }
 
 .bg-fun-gradient {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  background: linear-gradient(135deg, #3B82F6 0%, #10B981 50%, #FACC15 100%);
 }
 
-.bg-fresh-gradient {
-  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+.bg-pink-yellow-gradient {
+  background: linear-gradient(135deg, #EC4899 0%, #FACC15 100%);
 }
 
-.text-gradient-rainbow {
-  background: linear-gradient(90deg, #FF6B35, #EC4899, #8B5CF6, #0284C7);
+.bg-blue-green-gradient {
+  background: linear-gradient(135deg, #0284C7 0%, #10B981 100%);
+}
+
+.bg-mimo-bar {
+  background: linear-gradient(90deg, #0284C7 0%, #EC4899 33%, #10B981 66%, #EAB308 100%);
+}
+
+.text-gradient-mimo {
+  background: linear-gradient(90deg, #0284C7, #EC4899, #10B981, #EAB308);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

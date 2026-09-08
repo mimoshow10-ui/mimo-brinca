@@ -22,7 +22,11 @@ export default async function Home() {
   } else if (bannersConfig?.urls && Array.isArray(bannersConfig.urls)) {
     banners = bannersConfig.urls.map((u: string) => ({ url: u, link_url: '' }));
   } else {
-    banners = [{ url: '/banner-pet.jpg', link_url: '' }];
+    banners = [{ url: '/banner-cao-crianca.png', link_url: '' }];
+  }
+
+  if (banners.length === 0 || !banners.some(b => b.url.includes('banner-cao-crianca'))) {
+    banners = [{ url: '/banner-cao-crianca.png', link_url: '' }, ...banners];
   }
 
   const cuponsConfig = configs?.find(c => c.chave === 'cupons_config')?.valor || { posicao_home: 'topo' };

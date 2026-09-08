@@ -16,7 +16,7 @@ export default function TopBar({ topbar }: { topbar: any }) {
   const frase2 = topbar.texto2 || '';
 
   return (
-    <div className={`w-full bg-gradient-to-r from-orange-500 via-amber-500 to-rose-500 text-white py-2 px-4 shadow-xs`}>
+    <div className={`w-full bg-mimo-bar text-white py-2 px-4 shadow-xs`}>
       <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-1 text-center font-sans">
         {/* Linha 1 */}
         <span className="text-xs sm:text-sm font-black tracking-wide leading-tight drop-shadow-xs flex items-center gap-1.5 justify-center">

@@ -4,13 +4,6 @@ import Link from 'next/link';
 
 const CATEGORIAS_MIMO = [
   {
-    nome: 'Brinquedos',
-    emoji: '🎾',
-    slug: 'adesivos', // ou categoria cadastrada
-    bgGradient: 'from-amber-400 to-orange-500',
-    shadowColor: 'shadow-orange-200',
-  },
-  {
     nome: 'Gravatinhas',
     emoji: '👔',
     slug: 'gravatinhas',
@@ -22,28 +15,35 @@ const CATEGORIAS_MIMO = [
     emoji: '🎀',
     slug: 'lacinhos',
     bgGradient: 'from-pink-400 to-rose-500',
-    shadowColor: 'shadow-rose-200',
+    shadowColor: 'shadow-pink-200',
+  },
+  {
+    nome: 'Adesivos',
+    emoji: '🎨',
+    slug: 'adesivos',
+    bgGradient: 'from-yellow-300 to-amber-400',
+    shadowColor: 'shadow-amber-200',
   },
   {
     nome: 'Bandanas',
     emoji: '🩲',
     slug: 'bandanas',
-    bgGradient: 'from-purple-400 to-indigo-600',
-    shadowColor: 'shadow-purple-200',
+    bgGradient: 'from-emerald-400 to-teal-500',
+    shadowColor: 'shadow-emerald-200',
   },
   {
     nome: 'Gargantilhas',
     emoji: '📿',
     slug: 'gargantilhas',
-    bgGradient: 'from-emerald-400 to-teal-600',
-    shadowColor: 'shadow-emerald-200',
+    bgGradient: 'from-pink-500 to-pink-600',
+    shadowColor: 'shadow-pink-200',
   },
   {
     nome: 'Colarinhos',
     emoji: '🐾',
     slug: 'colarinhos',
-    bgGradient: 'from-fuchsia-400 to-pink-600',
-    shadowColor: 'shadow-fuchsia-200',
+    bgGradient: 'from-blue-500 to-cyan-500',
+    shadowColor: 'shadow-cyan-200',
   },
 ];
 
