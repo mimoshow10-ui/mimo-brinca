@@ -29,7 +29,7 @@ export default async function CategoriaPage({
   let grupoPai: any = null;
 
   if (slug === 'todas') {
-    const { data } = await supabase.from('produtos').select('*').eq('ativo', true).order('criado_em', { ascending: false });
+    const { data } = await supabase.from('produtos').select('*').eq('ativo', true).eq('marca', 'Mimo Brinca').order('criado_em', { ascending: false });
     if (data) produtos = data;
   } else if (catAtual) {
     const isGrupo = !catAtual.parent_id;
@@ -73,7 +73,7 @@ export default async function CategoriaPage({
       }
     } catch {}
 
-    let query = supabase.from('produtos').select('*').eq('ativo', true);
+    let query = supabase.from('produtos').select('*').eq('ativo', true).eq('marca', 'Mimo Brinca');
 
     if (prodIdsAdicionais.length > 0) {
       query = query.or(`categoria_id.in.(${idsRelacionados.join(',')}),id.in.(${prodIdsAdicionais.join(',')})`);

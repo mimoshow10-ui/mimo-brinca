@@ -47,11 +47,12 @@ export default async function Home() {
     produtosEspecificos = [...(specById || []), ...(specBySku || [])];
   }
 
-  // Puxar todos os produtos ativos na vitrine
+  // Puxar todos os produtos ativos na vitrine do Mimo Brinca
   const { data: todosProdutos } = await supabase
     .from('produtos')
     .select('*')
     .eq('ativo', true)
+    .eq('marca', 'Mimo Brinca')
     .order('criado_em', { ascending: false });
 
   // Buscar apenas produtos marcados EXPLICITAMENTE como destaque_super_promocao pelo usuario
@@ -60,6 +61,7 @@ export default async function Home() {
     .select('*')
     .eq('destaque_super_promocao', true)
     .eq('ativo', true)
+    .eq('marca', 'Mimo Brinca')
     .order('criado_em', { ascending: false });
 
   const produtos = todosProdutos || [];

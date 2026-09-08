@@ -23,7 +23,7 @@ export default async function CategoryNav() {
     .order('nome');
 
   const all = (categoriasAll || []) as Categoria[];
-  const pais = all.filter(c => c.parent_id === null);
+  const pais = all.filter(c => c.parent_id === null && Object.keys(EMOJIS).includes(c.slug));
 
   if (pais.length === 0) return null;
 
