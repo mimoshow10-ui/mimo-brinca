@@ -9,14 +9,14 @@ export default function Footer() {
           
           {/* Sobre com Logomarca MimoShow */}
           <div className="space-y-3">
-            <h3 className="text-xl font-heading font-bold text-accent">Grupo MimoShow</h3>
+            <h3 className="text-xl font-heading font-bold text-accent">Mimo Brinca</h3>
             <Link href="/">
-              <div className="relative w-48 h-14 cursor-pointer">
+              <div className="relative w-48 h-14 cursor-pointer bg-white/10 p-2 rounded-2xl backdrop-blur-xs">
                 <Image
-                  src="/logo-mimoshow.png"
-                  alt="Logomarca Grupo MimoShow"
+                  src="/logo-mimo-brinca.png"
+                  alt="Logomarca Mimo Brinca"
                   fill
-                  className="object-contain object-left mix-blend-multiply"
+                  className="object-contain object-left p-1"
                 />
               </div>
             </Link>

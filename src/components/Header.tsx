@@ -27,12 +27,12 @@ export default async function Header() {
           {/* Logo do Site (Aumentado 50%) */}
           <div className="flex items-center">
             <Link href="/">
-              <div className="relative w-72 md:w-[380px] h-20 md:h-24 cursor-pointer overflow-visible flex items-center">
+              <div className="relative w-48 sm:w-56 md:w-64 h-14 md:h-16 cursor-pointer flex items-center">
                 <Image 
-                  src="/logo-luxo.png" 
+                  src="/logo-mimo-brinca.png" 
                   alt="Mimo Brinca Logo" 
                   fill 
-                  className="object-contain object-left scale-[1.5] origin-left" 
+                  className="object-contain object-left hover:scale-105 transition-transform duration-300" 
                   priority 
                 />
               </div>
