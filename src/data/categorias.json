@@ -1,0 +1,112 @@
+[
+  {
+    "id": "cat-mascaras",
+    "nome": "Máscaras",
+    "slug": "mascaras",
+    "parent_id": null,
+    "subgrupos": [
+      {
+        "id": "sub-mascaras-eva",
+        "nome": "EVA",
+        "slug": "mascaras-eva"
+      },
+      {
+        "id": "sub-mascaras-parana",
+        "nome": "Papel Paraná",
+        "slug": "mascaras-papel-parana"
+      }
+    ]
+  },
+  {
+    "id": "cat-brinquedos",
+    "nome": "Brinquedos",
+    "slug": "brinquedos",
+    "parent_id": null,
+    "subgrupos": [
+      {
+        "id": "sub-brinquedo-parana",
+        "nome": "Brinquedo Papel Paraná",
+        "slug": "brinquedo-papel-parana"
+      },
+      {
+        "id": "sub-brinquedos-eva",
+        "nome": "EVA",
+        "slug": "brinquedos-eva"
+      },
+      {
+        "id": "sub-brinquedos-parana",
+        "nome": "Papel Paraná",
+        "slug": "brinquedos-papel-parana"
+      }
+    ]
+  },
+  {
+    "id": "cat-quebra-cabecas",
+    "nome": "Quebra-Cabeças",
+    "slug": "quebra-cabecas",
+    "parent_id": null,
+    "subgrupos": [
+      {
+        "id": "sub-quebra-mdf",
+        "nome": "Quebra-Cabeça MDF",
+        "slug": "quebra-cabeca-mdf"
+      },
+      {
+        "id": "sub-quebra-parana",
+        "nome": "Papel Paraná",
+        "slug": "quebra-cabeca-papel-parana"
+      },
+      {
+        "id": "sub-quebra-eva",
+        "nome": "EVA",
+        "slug": "quebra-cabeca-eva"
+      }
+    ]
+  },
+  {
+    "id": "cat-tiaras-bolsas",
+    "nome": "Tiaras e Bolsas",
+    "slug": "tiaras-e-bolsas",
+    "parent_id": null,
+    "subgrupos": [
+      {
+        "id": "sub-tiaras",
+        "nome": "Tiaras",
+        "slug": "tiaras"
+      },
+      {
+        "id": "sub-bolsas",
+        "nome": "Bolsas",
+        "slug": "bolsas"
+      },
+      {
+        "id": "sub-tiaras-eva",
+        "nome": "EVA",
+        "slug": "tiaras-bolsas-eva"
+      },
+      {
+        "id": "sub-tiaras-parana",
+        "nome": "Papel Paraná",
+        "slug": "tiaras-bolsas-papel-parana"
+      }
+    ]
+  },
+  {
+    "id": "cat-decoracao",
+    "nome": "Decoração",
+    "slug": "decoracao",
+    "parent_id": null,
+    "subgrupos": [
+      {
+        "id": "sub-quadros",
+        "nome": "Quadros",
+        "slug": "quadros"
+      },
+      {
+        "id": "sub-relogios",
+        "nome": "Relógios",
+        "slug": "relogios"
+      }
+    ]
+  }
+]
