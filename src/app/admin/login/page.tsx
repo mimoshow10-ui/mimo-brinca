@@ -121,7 +121,7 @@ export default function AdminLoginPage() {
           <div className="w-20 h-20 mx-auto relative mb-2">
             <Image
               src="/logo-luxo.jpg"
-              alt="Banho & Tosa Pet"
+              alt="Mimo Brinca"
               fill
               className="object-contain"
             />
@@ -131,7 +131,7 @@ export default function AdminLoginPage() {
             Painel Administrativo
           </h1>
           <p className="text-xs text-blue-200 mt-1 font-medium">
-            Autenticação Administrativa Banho & Tosa Pet
+            Autenticação Administrativa Mimo Brinca
           </p>
         </div>
 

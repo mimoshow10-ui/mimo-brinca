@@ -210,7 +210,7 @@ export default function CheckoutPage() {
           id: 'frete-retirada',
           transportadora_id: '4',
           nome: 'Retirar na Loja Física',
-          nome_transportadora: 'Loja Banho & Tosa',
+          nome_transportadora: 'Loja Mimo Brinca',
           valor: 0,
           prazo_dias: 0,
           prazo_estimado_texto: 'Pronto para retirada após confirmação',
@@ -287,7 +287,7 @@ export default function CheckoutPage() {
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-heading font-black text-xl text-secondary">
             <span className="text-primary text-2xl">🐶</span>
-            Banho & Tosa Pet
+            Mimo Brinca
           </Link>
           <div className="flex items-center gap-1 text-xs text-gray-500 font-medium">
             <ShieldCheck size={16} className="text-green-600" />

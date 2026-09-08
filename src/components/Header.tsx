@@ -30,7 +30,7 @@ export default async function Header() {
               <div className="relative w-72 md:w-[380px] h-20 md:h-24 cursor-pointer overflow-visible flex items-center">
                 <Image 
                   src="/logo-luxo.png" 
-                  alt="Banho e Tosa Pet Logo" 
+                  alt="Mimo Brinca Logo" 
                   fill 
                   className="object-contain object-left scale-[1.5] origin-left" 
                   priority 

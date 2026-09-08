@@ -165,7 +165,7 @@ export default function GerenciarPedidoControl({ pedido }: Props) {
               rel="noreferrer"
               className="text-xs font-bold text-primary hover:underline flex items-center gap-1.5"
             >
-              <span>banhoetosapet.com.br/rastreamento?pedido={pedido.numero_pedido}</span>
+              <span>mimobrinca.com.br/rastreamento?pedido={pedido.numero_pedido}</span>
               <ExternalLink size={12} />
             </a>
           </div>

@@ -6,6 +6,7 @@ import BannerCarousel from "@/components/BannerCarousel";
 import HomeCouponsBanner from "@/components/HomeCouponsBanner";
 import ProductCard from "@/components/ProductCard";
 import BenefitsBar from "@/components/BenefitsBar";
+import ColorfulCategoryGrid from "@/components/ColorfulCategoryGrid";
 
 import { hasValidPhoto } from "@/lib/productFilter";
 
@@ -136,6 +137,9 @@ export default async function Home() {
 
       {/* BARRA DE BENEFÍCIOS E DIFERENCIAIS */}
       <BenefitsBar />
+
+      {/* GRADE DE CATEGORIAS COLORIDAS */}
+      <ColorfulCategoryGrid />
 
       {/* 3. FAIXA DE CUPONS ABAIXO DOS BENEFÍCIOS */}
       {posicaoCupons === 'abaixo_beneficios' && <HomeCouponsBanner />}

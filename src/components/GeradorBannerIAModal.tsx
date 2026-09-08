@@ -11,7 +11,7 @@ const SUGESTOES_TEMAS = [
   '🎀 Lacinhos e Gravatinhas Pet',
   '🎃 Coleção de Halloween Pet',
   '🐱 Produtos e Brinquedos para Gatos',
-  '🐶 Acessórios de Banho e Tosa',
+  '🐶 Brinquedos e Jogos Pet',
   '🎄 Especial Promocional de Natal',
   '🚚 Banner de Frete Grátis',
 ];

@@ -60,10 +60,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const produto = await buscarProdutoMultiEstagio(slug);
 
-    if (!produto) return { title: 'Produto não encontrado | Banho & Tosa Pet' };
+    if (!produto) return { title: 'Produto não encontrado | Mimo Brinca' };
 
-    const title = String(produto.seo_title || `${produto.nome || 'Produto'} | Banho & Tosa Pet`).slice(0, 70);
-    const rawDesc = String(produto.seo_description || produto.descricao_curta || `Compre ${produto.nome || 'produtos'} no Banho & Tosa Pet!`);
+    const title = String(produto.seo_title || `${produto.nome || 'Produto'} | Mimo Brinca`).slice(0, 70);
+    const rawDesc = String(produto.seo_description || produto.descricao_curta || `Compre ${produto.nome || 'produtos'} no Mimo Brinca!`);
     const description = rawDesc.replace(/<[^>]*>?/gm, '').replace(/[\r\n]+/g, ' ').slice(0, 160).trim();
 
     let imagem = '/logo-luxo.png';
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       twitter: { card: 'summary_large_image', title, description, images: [imagem] }
     };
   } catch {
-    return { title: 'Banho & Tosa Pet' };
+    return { title: 'Mimo Brinca' };
   }
 }
 

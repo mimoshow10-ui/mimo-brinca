@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
       } else if (q.includes('tamanho') || q.includes('medida') || q.includes('porte')) {
         resposta = `O "${nome}" foi projetado especialmente para estética pet. Confira as dimensões na ficha técnica abaixo.`;
       } else if (q.includes('material') || q.includes('eva') || q.includes('qualidade')) {
-        resposta = `Este produto utiliza materiais atóxicos, leves e de alta aderência, próprios para estética e banho e tosa.`;
+        resposta = `Este produto utiliza materiais atóxicos, leves e seguros, próprios para diversão e brincadeiras pet.`;
       } else if (descClean.length > 10) {
         resposta = `Sobre "${nome}": ${descClean.slice(0, 180)}...`;
       } else {

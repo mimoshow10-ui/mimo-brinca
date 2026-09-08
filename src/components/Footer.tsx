@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-gray-300 leading-relaxed">
-              O maior fabricante de acessórios para banho e tosa do Brasil. Seu pet merece estilo e conforto todos os dias.
+              Os melhores brinquedos, jogos e acessórios educativos para deixar a rotina do seu pet divertida e cheia de carinho!
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-blue-800 text-center text-sm text-gray-400">
           <p>Integrado com Bling | Pagamento seguro via Mercado Livre</p>
-          <p className="mt-2">&copy; {new Date().getFullYear()} Banho e Tosa Pet. Todos os direitos reservados.</p>
+          <p className="mt-2">&copy; {new Date().getFullYear()} Mimo Brinca. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

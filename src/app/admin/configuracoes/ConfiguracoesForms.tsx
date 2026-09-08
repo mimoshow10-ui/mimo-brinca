@@ -242,7 +242,7 @@ export default function ConfiguracoesForms({ temSenhaConfigurada, resendConfig, 
           </p>
           <p>1. Crie uma conta gratuita em <a href="https://resend.com" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-purple-700">resend.com</a>.</p>
           <p>2. Vá na seção <strong>API Keys</strong> e crie uma chave (começará com <code>re_...</code>).</p>
-          <p>3. 💡 <em>Nota sobre o envio:</em> No plano gratuito com remetente padrão (<code>onboarding@resend.dev</code>), os e-mails são entregues exclusivamente para a conta de e-mail cadastrada no Resend. Para disparar para qualquer e-mail de cliente, adicione seu domínio (ex: <code>banhoetosapet.com.br</code>) no menu <strong>Domains</strong> do Resend.</p>
+          <p>3. 💡 <em>Nota sobre o envio:</em> No plano gratuito com remetente padrão (<code>onboarding@resend.dev</code>), os e-mails são entregues exclusivamente para a conta de e-mail cadastrada no Resend. Para disparar para qualquer e-mail de cliente, adicione seu domínio (ex: <code>mimobrinca.com.br</code>) no menu <strong>Domains</strong> do Resend.</p>
         </div>
 
         {msgResend && (

@@ -4,19 +4,22 @@
   --color-primary: #FF6B35;
   --color-secondary: #004E89;
   --color-accent: #F7B801;
-  --color-background: #FFFFFF;
-  --color-text: #2C3E50;
-  --color-border: #E8E8E8;
-  --color-success: #27AE60;
-  --color-alert: #E74C3C;
+  --color-background: #FAFAFD;
+  --color-text: #1E293B;
+  --color-border: #E2E8F0;
+  --color-success: #10B981;
+  --color-alert: #EF4444;
+  --color-purple: #8B5CF6;
+  --color-pink: #EC4899;
+  --color-teal: #14B8A6;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #2C3E50;
+  --background: #FAFAFD;
+  --foreground: #1E293B;
 }
 
 body {
@@ -39,3 +42,23 @@ h1, h2, h3, h4, h5, h6 {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
+
+/* Efeitos Especiais de Cores & Animações Mimo Brinca */
+.bg-vibrant-gradient {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 40%, #F7B801 100%);
+}
+
+.bg-fun-gradient {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+}
+
+.bg-fresh-gradient {
+  background: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+}
+
+.text-gradient-rainbow {
+  background: linear-gradient(90deg, #FF6B35, #EC4899, #8B5CF6, #0284C7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

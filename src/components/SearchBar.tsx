@@ -75,7 +75,7 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && setOpen(true)}
-          placeholder="Buscar acessórios para seu pet..."
+          placeholder="Buscar brinquedos, jogos e mimos para seu pet..."
           className="w-full bg-gray-100 rounded-full py-2.5 pl-4 pr-10 text-sm border border-transparent focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition shadow-inner"
         />
         {query ? (

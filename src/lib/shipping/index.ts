@@ -81,7 +81,7 @@ export async function calcularFretesCarrinho(
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${tokenFrete}`,
-          'User-Agent': 'MimoShowPet (contato@banhoetosapet.com.br)'
+          'User-Agent': 'MimoBrinca (contato@mimobrinca.com.br)'
         },
         body: JSON.stringify({
           from: { postal_code: cepOrigem || '09210360' },
