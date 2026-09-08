@@ -59,14 +59,14 @@ export async function POST(req: Request) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: 'Segurança Mimo Show Pet <onboarding@resend.dev>',
+            from: 'Segurança Mimo Brinca <onboarding@resend.dev>',
             to: [emailDestino],
             subject: '🔒 Código de Segurança - Recuperação de Acesso Painel Admin',
             html: `
               <div style="font-family: sans-serif; padding: 24px; background-color: #0B2545; color: #ffffff;">
                 <div style="max-width: 500px; margin: 0 auto; background: #ffffff; border-radius: 20px; padding: 32px; color: #1e293b; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                   <div style="text-align: center; margin-bottom: 20px;">
-                    <h1 style="font-size: 22px; font-weight: 900; color: #0B2545; margin: 0;">Mimo Show Pet</h1>
+                    <h1 style="font-size: 22px; font-weight: 900; color: #0B2545; margin: 0;">Mimo Brinca</h1>
                     <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Recuperação de Senha de Acesso</p>
                   </div>
                   <div style="background-color: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 16px; padding: 20px; text-align: center; margin: 24px 0;">

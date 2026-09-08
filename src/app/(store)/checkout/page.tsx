@@ -286,7 +286,7 @@ export default function CheckoutPage() {
       <header className="bg-white border-b border-gray-200 py-4 shadow-2xs sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-heading font-black text-xl text-secondary">
-            <span className="text-primary text-2xl">🐶</span>
+            <span className="text-primary text-2xl">🎁</span>
             Mimo Brinca
           </Link>
           <div className="flex items-center gap-1 text-xs text-gray-500 font-medium">

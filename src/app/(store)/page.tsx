@@ -185,7 +185,7 @@ export default async function Home() {
                 <h2 className="text-2xl md:text-3xl font-heading font-black text-amber-900 uppercase tracking-tight flex items-center gap-2">
                   ⭐ Os Mais Vendidos
                 </h2>
-                <p className="text-amber-700 font-bold text-xs md:text-sm mt-0.5">Os queridinhos dos nossos clientes pet shop!</p>
+                <p className="text-amber-700 font-bold text-xs md:text-sm mt-0.5">Os brinquedos e artigos mais amados pelas crianças!</p>
               </div>
               <Link href="/categoria/todas" className="text-amber-800 font-bold hover:underline text-xs md:text-sm hidden md:block">
                 Ver todos os mais vendidos &rarr;

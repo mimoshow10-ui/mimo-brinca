@@ -25,7 +25,7 @@ export default async function AdminLayout({
         {/* Topo da Sidebar */}
         <div className="p-5 border-b border-blue-800/60 bg-blue-950/50 flex-shrink-0">
           <h2 className="font-heading font-black text-xl text-amber-400 tracking-wide flex items-center gap-2">
-            <span>🐾 Painel Admin</span>
+            <span>🎈 Painel Admin</span>
           </h2>
           <p className="text-xs text-blue-200 mt-1 font-semibold">Mimo Brinca</p>
         </div>

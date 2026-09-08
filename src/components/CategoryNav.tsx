@@ -9,16 +9,12 @@ interface Categoria {
 }
 
 const EMOJIS: Record<string, string> = {
-  'adesivos': '🎨',
-  'bandanas': '🩲',
-  'cartelas-sticker': '🐶',
-  'colarinhos': '🐾',
-  'faixas-decorativas': '🐶',
-  'gargantilhas': '📿',
-  'gravatinhas': '👔',
-  'lacinhos': '🎀',
-  'outubro-rosa': '🐶',
-  'quadros': '🐶',
+  'brinquedos-educativos': '🧩',
+  'bebes-e-primeira-infancia': '👶',
+  'arte-e-criatividade': '🎨',
+  'jogos-e-veiculos': '🚀',
+  'ao-ar-livre-e-festas': '🎈',
+  'kits-e-presentes': '🎁',
 };
 
 export default async function CategoryNav() {
