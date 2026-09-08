@@ -4,46 +4,32 @@ import Link from 'next/link';
 
 const CATEGORIAS_MIMO = [
   {
-    nome: 'Educativos',
-    emoji: '🧩',
-    slug: 'brinquedos-educativos',
-    bgGradient: 'from-sky-400 to-blue-600',
-    shadowColor: 'shadow-blue-200',
-  },
-  {
-    nome: 'Bebês',
-    emoji: '👶',
-    slug: 'bebes-e-primeira-infancia',
+    nome: 'Máscaras',
+    emoji: '🎭',
+    slug: 'mascaras',
     bgGradient: 'from-pink-400 to-rose-500',
     shadowColor: 'shadow-pink-200',
   },
   {
-    nome: 'Arte & Cor',
-    emoji: '🎨',
-    slug: 'arte-e-criatividade',
+    nome: 'Brinquedos',
+    emoji: '🧸',
+    slug: 'brinquedos',
+    bgGradient: 'from-sky-400 to-blue-600',
+    shadowColor: 'shadow-blue-200',
+  },
+  {
+    nome: 'Quebra-Cabeças',
+    emoji: '🧩',
+    slug: 'quebra-cabecas',
     bgGradient: 'from-yellow-300 to-amber-400',
     shadowColor: 'shadow-amber-200',
   },
   {
-    nome: 'Veículos & Jogos',
-    emoji: '🚀',
-    slug: 'jogos-e-veiculos',
+    nome: 'Tiaras e Bolsas',
+    emoji: '👑',
+    slug: 'tiaras-e-bolsas',
     bgGradient: 'from-emerald-400 to-teal-500',
     shadowColor: 'shadow-emerald-200',
-  },
-  {
-    nome: 'Ao Ar Livre',
-    emoji: '🎈',
-    slug: 'ao-ar-livre-e-festas',
-    bgGradient: 'from-pink-500 to-rose-600',
-    shadowColor: 'shadow-rose-200',
-  },
-  {
-    nome: 'Kits & Mimos',
-    emoji: '🎁',
-    slug: 'kits-e-presentes',
-    bgGradient: 'from-blue-500 to-indigo-600',
-    shadowColor: 'shadow-indigo-200',
   },
 ];
 
@@ -58,7 +44,7 @@ export default function ColorfulCategoryGrid() {
           <span className="text-xs font-bold text-slate-400">Escolha seu mimo favorito</span>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
           {CATEGORIAS_MIMO.map((cat, idx) => (
             <Link
               key={idx}

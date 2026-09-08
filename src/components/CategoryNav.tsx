@@ -9,12 +9,10 @@ interface Categoria {
 }
 
 const EMOJIS: Record<string, string> = {
-  'brinquedos-educativos': '🧩',
-  'bebes-e-primeira-infancia': '👶',
-  'arte-e-criatividade': '🎨',
-  'jogos-e-veiculos': '🚀',
-  'ao-ar-livre-e-festas': '🎈',
-  'kits-e-presentes': '🎁',
+  'mascaras': '🎭',
+  'brinquedos': '🧸',
+  'quebra-cabecas': '🧩',
+  'tiaras-e-bolsas': '👑',
 };
 
 export default async function CategoryNav() {
