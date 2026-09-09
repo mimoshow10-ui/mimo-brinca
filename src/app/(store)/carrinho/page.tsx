@@ -480,7 +480,7 @@ export default function CarrinhoPage() {
         <div className="bg-white p-12 text-center rounded-2xl border border-dashed border-gray-300 max-w-md mx-auto space-y-4 shadow-2xs">
           <ShoppingBag size={48} className="mx-auto text-gray-300" />
           <h2 className="text-xl font-bold text-secondary">Seu carrinho está vazio</h2>
-          <p className="text-xs text-gray-500">Navegue pelas nossas categorias e adicione produtos incríveis para o seu pet!</p>
+          <p className="text-xs text-gray-500">Navegue pelas nossas categorias e descubra brinquedos e brincadeiras incríveis para as crianças!</p>
           <Link
             href="/"
             className="inline-block bg-primary hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-sm"

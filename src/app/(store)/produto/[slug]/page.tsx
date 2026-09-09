@@ -10,6 +10,7 @@ import ProductCouponsBanner from '@/components/ProductCouponsBanner';
 import AddToCartButtons from '@/components/AddToCartButtons';
 import SafeComponent from '@/components/SafeComponent';
 import { notFound } from 'next/navigation';
+import { hasValidPhoto } from '@/lib/productFilter';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -88,7 +89,8 @@ export default async function ProdutoPage({ params }: { params: Promise<{ slug: 
   
   const rawProduto = await buscarProdutoMultiEstagio(slug);
 
-  if (!rawProduto) notFound();
+  // Regra Estrita: produto SÓ aparece na tela de vendas se tiver foto
+  if (!rawProduto || !hasValidPhoto(rawProduto)) notFound();
 
   // O produto ativo é exatamente o produto individual clicado pelo cliente
   const produto = { ...rawProduto };

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Search, X } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+import { hasValidPhoto } from '@/lib/productFilter';
 
 interface ProdutoBusca {
   id: string;
@@ -50,9 +51,10 @@ export default function SearchBar() {
         .select('id, nome, slug, preco, preco_promocional, imagens')
         .eq('ativo', true)
         .or(`nome.ilike.%${query}%,codigo_barras.ilike.%${query}%`)
-        .limit(6);
+        .limit(12);
 
-      setResultados(data || []);
+      const validos = (data || []).filter(hasValidPhoto).slice(0, 6);
+      setResultados(validos);
       setOpen(true);
       setLoading(false);
     }, 250);
@@ -75,7 +77,7 @@ export default function SearchBar() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && setOpen(true)}
-          placeholder="Buscar brinquedos, jogos e mimos para seu pet..."
+          placeholder="Buscar brinquedos, jogos, máscaras e mimos..."
           className="w-full bg-gray-100 rounded-full py-2.5 pl-4 pr-10 text-sm border border-transparent focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition shadow-inner"
         />
         {query ? (

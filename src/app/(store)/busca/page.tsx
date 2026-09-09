@@ -53,7 +53,7 @@ export default async function BuscaPage({
       ) : (
         <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-border">
           <p className="text-gray-500 font-bold mb-2">Nenhum produto encontrado para "{q}".</p>
-          <p className="text-sm text-gray-400 mb-4">Tente buscar por termos mais genéricos como "gravata", "laço" ou "adesivo".</p>
+          <p className="text-sm text-gray-400 mb-4">Tente buscar por termos como "mdf", "máscara", "brinquedo", "jogos" ou "tiara".</p>
           <Link href="/categoria/todas" className="inline-block bg-primary text-white font-bold px-6 py-2 rounded-lg hover:bg-orange-600 transition text-sm">
             Ver Todos os Produtos
           </Link>

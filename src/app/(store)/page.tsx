@@ -42,7 +42,7 @@ export default async function Home() {
     const { data: specBySku } = await supabase
       .from('produtos')
       .select('*')
-      .in('sku', explicitIds)
+      .in('codigo_barras', explicitIds)
       .eq('ativo', true);
     produtosEspecificos = [...(specById || []), ...(specBySku || [])];
   }
