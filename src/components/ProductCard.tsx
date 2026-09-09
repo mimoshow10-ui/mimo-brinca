@@ -3,9 +3,6 @@
 import Link from 'next/link';
 import CountdownTimer from './CountdownTimer';
 import { extractImageUrls } from './ProductMediaGallery';
-import { ShoppingBag, Sparkles } from 'lucide-react';
-import { useState } from 'react';
-import { hasValidPhoto } from '@/lib/productFilter';
 
 interface ProdutoCardProps {
   produto: {
@@ -21,13 +18,15 @@ interface ProdutoCardProps {
   };
 }
 
+import { useState } from 'react';
+import { hasValidPhoto } from '@/lib/productFilter';
+
 export default function ProductCard({ produto }: ProdutoCardProps) {
   const [imageError, setImageError] = useState(false);
 
-  if (imageError || !hasValidPhoto(produto)) return null;
-
   const fotos = extractImageUrls(produto.imagens);
-  let foto = fotos[0] || null;
+  let foto = (imageError || !fotos[0]) ? null : fotos[0];
+    
   if (foto && foto.startsWith('http://')) {
     foto = foto.replace(/^http:\/\//i, 'https://');
   }
@@ -46,27 +45,28 @@ export default function ProductCard({ produto }: ProdutoCardProps) {
   const timerAtivo = temPromo && expiraTime !== null && !isNaN(expiraTime) && expiraTime > agora;
 
   return (
-    <div className="flex flex-col bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden group hover:-translate-y-1">
+    <div className="flex flex-col bg-white rounded-2xl shadow-2xs hover:shadow-md transition-all border border-gray-200 overflow-hidden group">
       {/* Imagem do Produto com Badge de Desconto e Badge de SKU */}
-      <Link href={`/produto/${produto.slug}`} className="block relative">
-        <div className="aspect-square bg-slate-50 relative overflow-hidden flex items-center justify-center p-3">
-          <img
-            src={foto || ''}
-            alt={produto.nome || 'Produto Mimo Brinca'}
-            className="w-full h-full object-contain group-hover:scale-108 transition-transform duration-500"
-            onError={() => setImageError(true)}
-          />
+      <Link href={`/produto/${produto.slug}`}>
+        <div className="aspect-square bg-white relative overflow-hidden flex items-center justify-center p-1">
+          {foto && (
+            <img
+              src={foto}
+              alt={produto.nome || 'Produto'}
+              className="w-full h-full object-contain group-hover:scale-105 transition duration-300 bg-white"
+              onError={() => setImageError(true)}
+            />
+          )}
 
-          {/* Badge de SKU no canto inferior */}
+          {/* Badge Pequeno do SKU no Canto Inferior da Imagem */}
           {sku && (
-            <span className="absolute bottom-2 left-2 bg-slate-900/75 backdrop-blur-xs text-white font-mono text-[9px] font-bold px-2 py-0.5 rounded-lg shadow-xs z-10 pointer-events-none uppercase">
+            <span className="absolute bottom-1.5 left-1.5 bg-gray-900/80 backdrop-blur-xs text-white font-mono text-[9px] font-bold px-1.5 py-0.5 rounded shadow-2xs z-10 pointer-events-none uppercase">
               SKU: {sku}
             </span>
           )}
 
-          {/* Badge Desconto Vibrante */}
           {temPromo && pctDesconto > 0 && (
-            <span className="absolute top-2.5 right-2.5 bg-gradient-to-r from-red-500 to-rose-600 text-white font-black text-[11px] px-2.5 py-1 rounded-full shadow-md z-10 animate-bounce">
+            <span className="absolute top-2.5 right-2.5 bg-red-600 text-white font-black text-[11px] px-2.5 py-0.5 rounded-full shadow-md z-10 animate-pulse">
               -{pctDesconto}% OFF
             </span>
           )}
@@ -74,51 +74,47 @@ export default function ProductCard({ produto }: ProdutoCardProps) {
       </Link>
 
       {/* Conteúdo do Card */}
-      <div className="p-4 flex flex-col flex-1 justify-between gap-3 bg-white">
+      <div className="p-4 flex flex-col flex-1 justify-between gap-3">
         <div>
           <Link href={`/produto/${produto.slug}`}>
-            <h3 className="font-heading font-bold text-xs md:text-sm line-clamp-2 hover:text-primary transition-colors text-slate-800 leading-snug">
+            <h3 className="font-bold text-xs md:text-sm line-clamp-2 hover:text-primary transition text-secondary leading-snug">
               {produto.nome}
             </h3>
           </Link>
         </div>
 
-        <div className="mt-auto space-y-2.5">
+        <div className="mt-auto space-y-2">
           {/* Preço Cheio x Preço com Desconto */}
           {temPromo && precoPromo !== null ? (
             <div>
-              <span className="text-xs text-slate-400 line-through font-medium block">
+              <span className="text-xs text-gray-400 line-through font-medium block">
                 R$ {precoNormal.toFixed(2).replace('.', ',')}
               </span>
               <div className="flex items-baseline gap-1.5">
                 <span className="text-xl md:text-2xl font-heading font-black text-primary">
                   R$ {precoPromo.toFixed(2).replace('.', ',')}
                 </span>
-                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-md border border-emerald-200">
-                  Economize!
-                </span>
               </div>
             </div>
           ) : (
-            <span className="text-xl md:text-2xl font-heading font-black text-slate-900 block">
+            <span className="text-xl md:text-2xl font-heading font-black text-primary block">
               R$ {precoNormal.toFixed(2).replace('.', ',')}
             </span>
           )}
 
           {/* Timer de Validade Promocional */}
           {timerAtivo && (
-            <div className="pt-1.5 border-t border-amber-100">
+            <div className="pt-1 border-t border-orange-100">
               <CountdownTimer targetDate={produto.promocao_expira_em!} />
             </div>
           )}
 
-          {/* Botão Ver Produto com gradiente e efeito hover */}
+          {/* Botão Ver Produto */}
           <Link
             href={`/produto/${produto.slug}`}
-            className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FF8E53] hover:from-[#e55925] hover:to-[#FF6B35] text-white py-2.5 rounded-2xl font-bold transition-all duration-300 text-xs flex items-center justify-center gap-1.5 shadow-xs hover:shadow-md cursor-pointer group-hover:bg-vibrant-gradient"
+            className="w-full bg-secondary hover:bg-blue-900 text-white py-2 rounded-xl font-bold transition text-xs flex items-center justify-center gap-1 shadow-2xs cursor-pointer"
           >
-            <ShoppingBag size={15} />
-            <span>Ver Produto</span>
+            Ver Produto
           </Link>
         </div>
       </div>
