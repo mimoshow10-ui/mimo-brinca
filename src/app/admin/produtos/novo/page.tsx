@@ -19,14 +19,23 @@ export default async function NovoProduto() {
     const imagensTxt = formData.get('imagens') as string;
     const imagens = imagensTxt ? imagensTxt.split(/[\r\n,]+/).map(s => s.trim()).filter(s => s) : null;
     
-    const { data: insertedPai } = await supabase.from('produtos').insert([{ 
+    const payloadPai: any = { 
       nome, 
       preco, 
       estoque, 
       categoria_id, 
       slug,
       imagens
-    }]).select('id').single();
+    };
+    let resPai = await supabase.from('produtos').insert([payloadPai]).select('id').single();
+    while (resPai.error && (resPai.error.code === 'PGRST204' || resPai.error.message?.includes('schema cache'))) {
+      const match = resPai.error.message && resPai.error.message.match(/Could not find the '([^']+)' column/);
+      if (match && match[1] && match[1] in payloadPai) {
+        delete payloadPai[match[1]];
+        resPai = await supabase.from('produtos').insert([payloadPai]).select('id').single();
+      } else break;
+    }
+    const insertedPai = resPai.data;
 
     if (insertedPai?.id) {
       const paiId = insertedPai.id;
@@ -43,7 +52,7 @@ export default async function NovoProduto() {
           const varEstoque = parseInt(varEstoqueStr) || 0;
           const varSlug = `${slug}-var-${i}-${Date.now()}`;
 
-          const { data: newVar } = await supabase.from('produtos').insert([{
+                    const payloadVar: any = {
             nome: `${nome} - ${varNome || 'Opção ' + i}`,
             codigo_barras: varSku || null,
             preco: varPreco,
@@ -51,7 +60,16 @@ export default async function NovoProduto() {
             categoria_id,
             slug: varSlug,
             imagens
-          }]).select('id').single();
+          };
+          let resVar = await supabase.from('produtos').insert([payloadVar]).select('id').single();
+          while (resVar.error && (resVar.error.code === 'PGRST204' || resVar.error.message?.includes('schema cache'))) {
+            const match = resVar.error.message && resVar.error.message.match(/Could not find the '([^']+)' column/);
+            if (match && match[1] && match[1] in payloadVar) {
+              delete payloadVar[match[1]];
+              resVar = await supabase.from('produtos').insert([payloadVar]).select('id').single();
+            } else break;
+          }
+          const newVar = resVar.data;
 
           if (newVar?.id) {
             await linkProductToFamily(paiId, newVar.id);
