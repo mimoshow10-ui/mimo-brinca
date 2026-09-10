@@ -22,12 +22,12 @@ export default async function Header() {
       <TopBar topbar={topbar} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-1">
+        <div className="flex justify-between items-center py-2 md:py-3">
           
-          {/* Logo do Site (Aumentado 50%) */}
+          {/* Logo do Site (Aumentado em 70% no fundo branco) */}
           <div className="flex items-center">
             <Link href="/">
-              <div className="relative w-48 sm:w-56 md:w-64 h-14 md:h-16 cursor-pointer flex items-center">
+              <div className="relative w-56 sm:w-64 md:w-80 h-20 md:h-24 cursor-pointer flex items-center">
                 <Image 
                   src="/logo-mimo-brinca.png" 
                   alt="Mimo Brinca Logo" 
